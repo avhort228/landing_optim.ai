@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
@@ -17,42 +19,52 @@ header {
   padding: 10px 20px;
   display: flex;
   justify-content: flex-end;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .language-switcher span {
   cursor: pointer;
   margin: 0 5px;
   font-weight: normal;
+  transition: color 0.3s;
 }
 
 .language-switcher .active {
   font-weight: bold;
+  color: #007BFF;
 }
 
 main {
   max-width: 800px;
   width: 100%;
-  padding: 20px;
+  padding: 40px 20px;
   box-sizing: border-box;
 }
 
 section {
-  background-color: #fff;
-  padding: 30px;
+  background: linear-gradient(135deg, #ffffff, #f0f0f5);
+  padding: 40px;
   margin: 20px 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
   text-align: center;
+  transition: transform 0.3s;
+}
+
+section:hover {
+  transform: translateY(-5px);
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 2.5em;
   margin-bottom: 0.5em;
   color: #222;
 }
 
 h2 {
-  font-size: 1.5em;
+  font-size: 1.8em;
   color: #555;
   margin-top: 1em;
 }
@@ -66,8 +78,8 @@ ul {
 }
 
 li {
-  margin-bottom: 10px;
-  padding-left: 20px;
+  margin-bottom: 15px;
+  padding-left: 25px;
   position: relative;
 }
 
@@ -79,30 +91,32 @@ li:before {
 }
 
 button {
-  padding: 10px 20px;
-  font-size: 1em;
+  padding: 12px 25px;
+  font-size: 1.1em;
   color: #fff;
   background-color: #007BFF;
   border: none;
-  border-radius: 5px;
+  border-radius: 25px;
   cursor: pointer;
-  margin-top: 20px;
+  margin-top: 30px;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 button:hover {
   background-color: #0056b3;
+  transform: scale(1.05);
 }
 
 @media (max-width: 600px) {
   h1 {
-    font-size: 1.5em;
+    font-size: 2em;
   }
 
   h2 {
-    font-size: 1.2em;
+    font-size: 1.5em;
   }
 
   section {
-    padding: 20px;
+    padding: 30px;
   }
 }
