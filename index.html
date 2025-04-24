@@ -8,21 +8,88 @@
 </head>
 <body>
   <header>
-    <h1>AI для персонализации маркетинговых сообщений в реальном времени</h1>
-    <h2>Автоматическая персонализация и подбор офферов через API</h2>
+    <div class="language-switcher">
+      <span id="lang-ru" class="active">RU</span> | <span id="lang-en">EN</span>
+    </div>
   </header>
   <main>
-    <section class="problem">
-      <h3>Маркетинг без AI – это дорого и медленно:</h3>
+    <section class="lang-ru">
+      <h1>AI для персонализации маркетинговых сообщений в реальном времени</h1>
+      <h2>Проблема:</h2>
       <ul>
-        <li>Сегментация вручную → маркетологи тратят недели, аудитории остаются слишком широкими.</li>
-        <li>Тестирование гипотез затянуто → проверяют 2-3 гипотезы вместо сотен.</li>
-        <li>Нет персонализации → клиенты получают нерелевантные предложения.</li>
-        <li>ML-решения сложны и дороги → компании их просто не внедряют.</li>
-        <li>Результат – низкая конверсия, рост CAC, неэффективный бюджет.</li>
+        <li>Маркетологи неделями настраивают сегменты вручную</li>
+        <li>Тестируются 2–3 гипотезы вместо сотен</li>
+        <li>Клиенты получают неактуальные предложения</li>
+        <li>ML-решения слишком сложны и дороги для внедрения</li>
+        <li>Бюджет уходит в никуда, CAC растёт, конверсия падает</li>
       </ul>
-      <p>Мы это меняем.</p>
+      <h2>Наше решение:</h2>
+      <ul>
+        <li>Персонализация в реальном времени</li>
+        <li>Автоматическое тестирование гипотез</li>
+        <li>Простое REST API</li>
+        <li>Без команды ML</li>
+      </ul>
+      <h2>Для кого:</h2>
+      <ul>
+        <li>Маркетологам</li>
+        <li>CRM-командам</li>
+        <li>Разработчикам</li>
+      </ul>
+      <h2>Результат:</h2>
+      <ul>
+        <li>+30–50% к конверсии</li>
+        <li>–20% к CAC</li>
+        <li>Рост ROI с первого месяца</li>
+      </ul>
+      <button>Оставить заявку</button>
+    </section>
+    <section class="lang-en" style="display: none;">
+      <h1>AI for real-time personalized marketing</h1>
+      <h2>Problem:</h2>
+      <ul>
+        <li>Marketers manually segment audiences for weeks</li>
+        <li>Only 2–3 hypotheses tested instead of hundreds</li>
+        <li>Customers receive irrelevant offers</li>
+        <li>ML solutions are complex and expensive</li>
+        <li>Result: low conversion, high CAC, wasted budget</li>
+      </ul>
+      <h2>Our solution:</h2>
+      <ul>
+        <li>Real-time personalization</li>
+        <li>Automated hypothesis testing</li>
+        <li>Simple REST API</li>
+        <li>No ML team required</li>
+      </ul>
+      <h2>For:</h2>
+      <ul>
+        <li>Marketing teams</li>
+        <li>CRM specialists</li>
+        <li>Developers</li>
+      </ul>
+      <h2>Results:</h2>
+      <ul>
+        <li>+30–50% conversion uplift</li>
+        <li>–20% CAC</li>
+        <li>ROI growth from month one</li>
+      </ul>
+      <button>Request a demo</button>
     </section>
   </main>
+  <script>
+    document.getElementById('lang-ru').addEventListener('click', function() {
+      document.querySelector('.lang-ru').style.display = 'block';
+      document.querySelector('.lang-en').style.display = 'none';
+      this.classList.add('active');
+      document.getElementById('lang-en').classList.remove('active');
+    });
+
+    document.getElementById('lang-en').addEventListener('click', function() {
+      document.querySelector('.lang-en').style.display = 'block';
+      document.querySelector('.lang-ru').style.display = 'none';
+      this.classList.add('active');
+      document.getElementById('lang-ru').classList.remove('active');
+    });
+  </script>
 </body>
 </html>

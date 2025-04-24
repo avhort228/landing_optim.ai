@@ -5,17 +5,48 @@ body {
   line-height: 1.6;
   color: #333;
   background-color: #f4f4f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 header {
-  text-align: center;
-  padding: 50px 20px;
+  width: 100%;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.language-switcher span {
+  cursor: pointer;
+  margin: 0 5px;
+  font-weight: normal;
+}
+
+.language-switcher .active {
+  font-weight: bold;
+}
+
+main {
+  max-width: 800px;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+section {
+  background-color: #fff;
+  padding: 30px;
+  margin: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 2em;
   margin-bottom: 0.5em;
   color: #222;
 }
@@ -23,31 +54,15 @@ h1 {
 h2 {
   font-size: 1.5em;
   color: #555;
-}
-
-main {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.problem {
-  background-color: #fff;
-  padding: 30px;
-  margin: 20px 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-}
-
-h3 {
-  font-size: 1.2em;
-  margin-bottom: 1em;
-  color: #444;
+  margin-top: 1em;
 }
 
 ul {
   list-style-type: none;
   padding: 0;
+  text-align: left;
+  margin: 0 auto;
+  max-width: 600px;
 }
 
 li {
@@ -63,23 +78,31 @@ li:before {
   color: #007BFF;
 }
 
-p {
-  font-size: 1.1em;
-  color: #666;
-  text-align: center;
+button {
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #fff;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
   margin-top: 20px;
+}
+
+button:hover {
+  background-color: #0056b3;
 }
 
 @media (max-width: 600px) {
   h1 {
-    font-size: 2em;
+    font-size: 1.5em;
   }
 
   h2 {
     font-size: 1.2em;
   }
 
-  .problem {
+  section {
     padding: 20px;
   }
 }
